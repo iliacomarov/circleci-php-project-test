@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Install system packages     
           command: apt-get update && apt-get -y install git curl
-          command: ps aux | grep apache2 && curl http://localhost
+          command: ps aux | grep apache2 && netstat -tulpn | grep 80
       # - run:
       #     name: Install PHP extensions
       #     command: docker-php-ext-install pdo pdo_mysql
