@@ -14,6 +14,9 @@ jobs:
           name: Install PHP extensions
           command: docker-php-ext-install pdo pdo_mysql
       - run:
+          name: Clone project files
+          command: git clone -b 8.2.x https://github.com/drupal/drupal.git .           
+      - run:
           name: Install Composer
           command: |
             php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
